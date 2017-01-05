@@ -9,5 +9,5 @@ angular.module('weather')
     units: '&units=metric',
     appid: '&appid=<ae655732a80e61ceb5461dd6967fbae3>',
     imgUrl: 'http://openweathermap.org/img/w/'
-  });
+  })
 

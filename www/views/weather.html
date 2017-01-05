@@ -2,11 +2,9 @@
   <div>
     <label class="item-input">
       <span class="input-label city">Ville :</span>
-      <input type="text" placeholder="Paris,fr" ng-model="search">
+      <input type="text" placeholder="Paris,fr" ng-model="search" ng-keypress="loadWeather(search, $event)">
     </label>
   </div>
-
-  <input type="text" placeholder="Paris,fr" ng-model="search" ng-keypress="loadWeather(search, $event)">
 
   <div ng-if="state">
     <img src="{{weatherData.icon}}"/>
