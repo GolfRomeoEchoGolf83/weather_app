@@ -14,11 +14,11 @@ angular.module('weather')
       temp: ''
     };
 
-    $scope.loadWeather = function(search, $event) {
+    $scope.loadWeather = function (search, $event) {
       console.log(search);
       if ($event.keyCode === 13) {
         var url = OpenWeatherConfig.searchUrl + search + OpenWeatherConfig.units + OpenWeatherConfig.appid;
-        $http.get(url).success(function(data) {
+        $http.get(url).success(function (data) {
           $scope.weatherData.icon = OpenWeatherConfig.imgUrl + data.weather[0].icon + '.png';
           $scope.weatherData.main = data.weather[0].main;
           $scope.weatherData.city = data.name;
@@ -27,6 +27,5 @@ angular.module('weather')
           $scope.state = true;
         });
       };
-    });
-
-
+    };
+  });
