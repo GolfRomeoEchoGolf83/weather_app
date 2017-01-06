@@ -26,6 +26,6 @@ angular.module('weather')
           $scope.weatherData.temp = data.main.temp;
           $scope.state = true;
         });
-      };
+      }
     };
   });
